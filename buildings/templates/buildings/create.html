@@ -12,6 +12,7 @@
 <main>
 <h1>Create a new building</h1>
 
+<!-- 'form.as_p' generates a form based on the CreateView that calls the template -->
 <form method="post">{% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Create">

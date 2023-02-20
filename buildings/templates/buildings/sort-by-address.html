@@ -3,18 +3,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SortBy, Pk | Buildings App</title>
+    <title>SortBy, Address | Buildings App</title>
     <link rel="stylesheet" href="{% static 'buildings/style.css' %}">
 </head>
 <body>
 <header><h3>Buildings App | Antonin Suzor</h3></header>
 
 <main>
-<h1>List of registered buildings, sorted by their primary key in the database.</h1>
+<h1>List of registered buildings, sorted by their address.</h1>
 <p>
     You may wish to sort them by :
-    <a href="{% url 'buildings:sort-by-name' %}">Name</a> or by :
-    <a href="{% url 'buildings:sort-by-name' %}">Address</a>
+    <a href="{% url 'buildings:sort-by-pk' %}">Primary Key in the database</a> or by :
+    <a href="{% url 'buildings:sort-by-name' %}">Name</a>
 </p>
 
 {% if building_list %}

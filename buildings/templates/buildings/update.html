@@ -18,6 +18,7 @@
     <a href="{% url 'buildings:delete' building.pk %}">Delete this building</a>.
 </p>
 
+<!-- 'form.as_p' generates a form based on the UpdateView that calls the template -->
 <form method="post">{% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Update">

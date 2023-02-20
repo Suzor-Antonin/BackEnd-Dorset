@@ -11,12 +11,16 @@
 
 <main>
 <h1>List of registered buildings, sorted by their name.</h1>
-<p>You may wish to sort them by : <a href="{% url 'buildings:sort-by-pk' %}">Primary Key in the database</a></p>
+<p>
+    You may wish to sort them by :
+    <a href="{% url 'buildings:sort-by-pk' %}">Primary Key in the database</a> or by :
+    <a href="{% url 'buildings:sort-by-address' %}">Address</a>
+</p>
 
 {% if building_list %}
     <ul>
     {% for building in building_list %}
-        <li><a href="{% url 'buildings:read' building.pk %}", target="_blank">{{ building }}</a></li><br>
+        <li><a href="{% url 'buildings:read' building.pk %}" target="_blank">{{ building.name }}</a> -- {{ building.get_address2 }}</li><br>
     {% endfor %}
     </ul>
 {% else %}
